@@ -16,8 +16,9 @@ export default async ({ req, res, log, error }) => {
   const logCollectionId = '66d18cd100349aec7523';
   const applicationChirpStackID = '90';
 
+  const mqtt_url = "mqtt://nsc.vngalaxy.vn/"
+
   var client_mqtt = mqtt.connect(mqtt_url)
-    // let topicName = `application/90/device/+/event/up`
     const topicName = `application/${applicationChirpStackID}/device/+/event/up`;
 
     client_mqtt.on("connect", function () {
