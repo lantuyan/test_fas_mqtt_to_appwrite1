@@ -45,7 +45,7 @@ export default async ({ req, res, log, error }) => {
             {
               name: temp.deviceName.split('_')[0],
               // time real get from nodejs server
-              time: new Date().toISOString,
+              time: new Date().toISOString(),
               timeTurnOn: "",
               battery: temp.object.battery,
               type : temp.deviceProfileName,
